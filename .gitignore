@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+out/
+
+# OS
+Thumbs.db
+.DS_Store

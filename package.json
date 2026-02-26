@@ -1,0 +1,24 @@
+{
+  "name": "cypress-api-automation",
+  "version": "1.0.0",
+  "description": "Accenture QA Automation Challenge - API Testing with Cypress and Cucumber BDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "cypress",
+    "bdd",
+    "cucumber",
+    "api-testing",
+    "qa-automation"
+  ],
+  "author": "Yan Rodrigues",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "axios": "^1.13.5",
+    "cypress": "^13.17.0"
+  }
+}
