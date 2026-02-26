@@ -3,6 +3,7 @@ Feature: Accenture QA Automation - API Challenge (Part 1)
   I want to automate the complete user and book rental flow
   So that I can verify the API functionality
 
+  @api
   Scenario: Complete User Creation and Book Rental Flow
     Given I create a new user with valid credentials
     When I generate an authentication token for the user

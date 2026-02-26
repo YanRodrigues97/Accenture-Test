@@ -6,7 +6,7 @@ const { generateRandomUsername, generateRandomPassword, storeData, getData } = r
 
 let testData = {};
 
-Before(() => {
+Before({ tags: '@api' }, () => {
   testData = {
     userName: generateRandomUsername(),
     password: generateRandomPassword(),
