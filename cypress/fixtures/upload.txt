@@ -1,0 +1,4 @@
+Accenture QA Automation Challenge - Frontend Test Upload File
+This file is used for the Practice Form file upload test.
+Generated for: demoqa.com automation exercise
+Date: 2026-02-26

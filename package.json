@@ -17,6 +17,7 @@
   "author": "Yan Rodrigues",
   "license": "ISC",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.1",
     "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "axios": "^1.13.5",
