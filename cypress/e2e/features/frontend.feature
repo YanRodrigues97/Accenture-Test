@@ -16,4 +16,15 @@ Feature: Accenture QA Automation - Frontend Challenges (Part 2)
     Then a submission confirmation popup should be visible
     When I close the confirmation popup
 
+  # ═══════════════════════════════════════════════════════════════
+  # CHALLENGE 2 – Browser Windows
+  # ═══════════════════════════════════════════════════════════════
+  Scenario: Open and validate a new browser window
+    Given I navigate to the demoqa home page
+    When I select the "Alerts, Frame & Windows" section on the home page
+    And I open the "Browser Windows" page from the sidebar
+    And I click the new window button
+    Then the new window should display "This is a sample page"
+    And I close the new window
+
   
