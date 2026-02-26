@@ -4,8 +4,7 @@
   "description": "Accenture QA Automation Challenge - API Testing with Cypress and Cucumber BDD",
   "main": "index.js",
   "scripts": {
-    "test": "node cypress/e2e/test-api.js",
-    "test:cypress": "cypress run --spec 'cypress/e2e/bookstore.cy.js'",
+    "test": "cypress run --spec 'cypress/e2e/features/bookstore.feature'",
     "cypress:open": "cypress open"
   },
   "keywords": [
