@@ -21,6 +21,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "axios": "^1.13.5",
-    "cypress": "^13.17.0"
+    "cypress": "^13.17.0",
+    "cypress-real-events": "^1.15.0"
   }
 }
