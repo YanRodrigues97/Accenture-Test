@@ -1,20 +1,18 @@
 // Utility functions for tests
 
-
-export const generateRandomId = () => {
+const generateRandomId = () => {
   return `user_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
 };
 
-
-export const generateRandomUsername = () => {
+const generateRandomUsername = () => {
   return `automation${Date.now()}`;
 };
 
-export const generateRandomPassword = () => {
+const generateRandomPassword = () => {
   return `Pass${Date.now()}!@#`;
 };
 
-export const getTestData = (key) => {
+const getTestData = (key) => {
   const testData = {
     baseUrl: 'https://demoqa.com',
     accountApi: {
@@ -31,7 +29,7 @@ export const getTestData = (key) => {
   return testData[key] || null;
 };
 
-export const storeData = (key, value) => {
+const storeData = (key, value) => {
   cy.window().then((win) => {
     if (!win.testData) {
       win.testData = {};
@@ -40,8 +38,17 @@ export const storeData = (key, value) => {
   });
 };
 
-export const getData = (key) => {
+const getData = (key) => {
   return cy.window().then((win) => {
     return win.testData ? win.testData[key] : null;
   });
+};
+
+module.exports = {
+  generateRandomId,
+  generateRandomUsername,
+  generateRandomPassword,
+  getTestData,
+  storeData,
+  getData,
 };

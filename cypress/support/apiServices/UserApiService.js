@@ -18,6 +18,7 @@ class UserApiService {
       headers: {
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 
@@ -38,22 +39,30 @@ class UserApiService {
       headers: {
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 
   /**
    * Check if user is authorized
+   * @param {string} userName - Username
+   * @param {string} password - Password
    * @param {string} token - Authorization token
    * @returns {Cypress.Chainable<Response>}
    */
-  isAuthorized(token) {
+  isAuthorized(userName, password, token) {
     return cy.request({
       method: 'POST',
       url: '/Account/v1/Authorized',
+      body: {
+        userName: userName,
+        password: password,
+      },
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 
@@ -71,8 +80,9 @@ class UserApiService {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 }
 
-export default new UserApiService();
+module.exports = new UserApiService();

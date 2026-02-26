@@ -1,10 +1,4 @@
-// BookStore API Service - Page Object Pattern for BookStore operations
-
 class BookstoreApiService {
-  /**
-   * Get list of available books
-   * @returns {Cypress.Chainable<Response>}
-   */
   getAvailableBooks() {
     return cy.request({
       method: 'GET',
@@ -12,16 +6,10 @@ class BookstoreApiService {
       headers: {
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 
-  /**
-   * Rent books (add books to user account)
-   * @param {string} userId - User ID
-   * @param {array} bookIsbns - Array of book ISBNs to rent
-   * @param {string} token - Authorization token
-   * @returns {Cypress.Chainable<Response>}
-   */
   rentBooks(userId, bookIsbns, token) {
     const collectionOfIsbns = bookIsbns.map((isbn) => ({
       isbn: isbn,
@@ -38,16 +26,10 @@ class BookstoreApiService {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 
-  /**
-   * Remove books from user account
-   * @param {string} userId - User ID
-   * @param {string} isbn - Book ISBN to remove
-   * @param {string} token - Authorization token
-   * @returns {Cypress.Chainable<Response>}
-   */
   removeBook(userId, isbn, token) {
     return cy.request({
       method: 'DELETE',
@@ -60,8 +42,9 @@ class BookstoreApiService {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
+      failOnStatusCode: false,
     });
   }
 }
 
-export default new BookstoreApiService();
+module.exports = new BookstoreApiService();
