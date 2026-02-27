@@ -292,11 +292,10 @@ The second part will focus on **Frontend UI Automation**:
 
 ## Project Status
 
-**Status**: Part 1 (API) - Complete and Tested  
+**Status**: Part 1 and part 2 (API) (Frontend) - Complete and Tested  
 **Version**: 1.0.0  
 **Last Updated**: February 26, 2026  
-**Author**: QA Automation Team  
-**License**: ISC  
+**Author**: Yan Rodrigues 
 
 ---
 
